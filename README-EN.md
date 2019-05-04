@@ -24,7 +24,16 @@ Perform the following steps:
 1. Access the next URL by Chrome browser.  
 [http://localhost:8080/home](http://localhost:8080/home)
 
-To check the performance of Service Worker, build this source code and deploy it on my web server.
+By configuration, you cann't run Service Worker in the development environment.
+So, I recommend using "[Service Worker for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)" to run Service Worker.
+
+1. Install "Service Worker for Chrome" in Chrome browser.
+
+1. Start the "Service Worker for Chrome".
+
+1. Select ``dist`` directory in "choose folder" of "Service Worker for Chrome".
+
+1. Access the "Web Server URL".
 
 ## Creating a Production Build
 Perform the following command:

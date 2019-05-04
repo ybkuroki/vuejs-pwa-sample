@@ -32,7 +32,16 @@
 
 1. ブラウザで[http://localhost:8080/home](http://localhost:8080/home)にアクセスする。
 
-ローカル実行では、Service Workerの動作確認はできません。Service Workerの動作確認は配布用ビルドしWebサーバ上にデプロイする必要がある。
+開発環境では、Service Workerは動作しない設定となっている。
+Service Workerの動作確認には[Service Worker for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)を使うと良い。
+
+1. Chromeブラウザに「Service Worker for Chrome」をインストールする。
+
+1. 「Service Worker for Chrome」を起動する。
+
+1. 「Service Worker for Chrome」の「choose folder」で``dist``ディレクトリを選ぶ。
+
+1. 「Web Server URL」にアクセスする。
 
 ## 配布用ビルド手順
 以下の手順でビルドする。
