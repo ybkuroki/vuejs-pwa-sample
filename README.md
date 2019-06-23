@@ -1,81 +1,70 @@
-[English Version](./README-EN.md)
-
 # vuejs-pwa-sample
 
-## はじめに
-本プロジェクトは、[Vue.js](https://jp.vuejs.org/index.html)、[Vue Material](https://vuematerial.io/)と[PWA(Progressive Web Apps)](https://developers.google.com/web/progressive-web-apps/)を用いて実装したサンプルである。
-本サンプルでは、[Connpass Web API](https://connpass.com/about/api/)を利用している。
+## Preface
+This sample project uses [Vue.js](https://vuejs.org/index.html), [Vue Material](https://vuematerial.io/) and [PWA(Progressive Web Apps)](https://developers.google.com/web/progressive-web-apps/).
+This sample uses the [Connpass Web API](https://connpass.com/about/api/).
 
-## 開発環境構築手順
-以下の手順で開発環境を構築する。
-
-1. [Node.js](https://nodejs.org/ja/)をダウンロード・インストールする。
-
-1. [Visual Studio Code](https://code.visualstudio.com/)(以下、VS Code)をダウンロード・インストールする。
-
-1. VS Codeの拡張機能である[vetur](https://github.com/vuejs/vetur)をインストールする。
-
-1. 依存関係のあるライブラリをダウンロードする。
+## Install
+Perform the following steps:
+1. Download and install [Node.js](https://nodejs.org/ja/).
+1. Download and install [Visual Studio Code(VS Code)](https://code.visualstudio.com/).
+1. Install [vetur](https://github.com/vuejs/vetur) extension for VS Code.
+1. Download and install npm packages.
     ```bash
     npm install
     ```
 
-## 動作確認手順
-以下の手順で動作を確認する。
-
-1. 本リポジトリをクローンする。
-
-1. ソースコードをビルドし実行する。
+## Starting Server
+Perform the following steps:
+1. Clone this repository.
+1. Start the development server.
     ```bash
     npm run serve
     ```
+1. Access the following URL in Chrome.  
+[http://localhost:8080/home](http://localhost:8080/home)
 
-1. ブラウザで[http://localhost:8080/home](http://localhost:8080/home)にアクセスする。
+By configuration, you cann't run Service Worker in the development environment.
+So, I recommend using "[Service Worker for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)" to run Service Worker.
 
-開発環境では、Service Workerは動作しない設定となっている。
-Service Workerの動作確認には[Service Worker for Chrome](https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb)を使うと良い。
+1. Install "Service Worker for Chrome" in Chrome.
 
-1. Chromeブラウザに「Service Worker for Chrome」をインストールする。
+1. Start the "Service Worker for Chrome".
 
-1. 「Service Worker for Chrome」を起動する。
+1. Select ``dist`` directory in "choose folder" of "Service Worker for Chrome".
 
-1. 「Service Worker for Chrome」の「choose folder」で``dist``ディレクトリを選ぶ。
+1. Access the "Web Server URL".
 
-1. 「Web Server URL」にアクセスする。
+## Creating a Production Build
+Perform the following command:
+```bash
+npm run build
+```
 
-## 配布用ビルド手順
-以下の手順でビルドする。
+## Views
+There are the following views in this sample.
 
-1. 配布用ビルドを実行する。
-    ```bash
-    npm run build
-    ```
-
-## 画面一覧
-表示する画面は以下の通りである。
-
-|画面名|ファイル名|概要|
+|View Name|File Name|Description|
 |:---|:---|:---|
-|ホーム画面|``Home.vue``|Connpassでイベントを検索する画面|
-|アプリ情報画面|``About.vue``|本アプリの情報を表示する画面|
+|Home View|``Home.vue``|Search for events via the Connpass Web API.|
+|About View|``About.vue``|About this sample.|
 
-## コンポーネント一覧
-上記画面で利用するコンポーネントは以下の通りである。
+## Components
+There are the following components in this sample.
 
-|コンポーネント名|ファイル名|概要|
+|Component Name|File Name|Description|
 |:---|:---|:---|
-|ヘッダー|``Header.vue``|Webアプリのヘッダーを定義|
-|カード|``Card.vue``|コンテンツを表示するためのカードを定義|
+|Header|``Header.vue``|Define the header of this web app.|
+|Card|``Card.vue``|Define a card to display content|
 
-## 利用ライブラリ
-以下のライブラリを主に利用している。
+## Libraries
+This sample uses the following library.
 
-|ライブラリ名|バージョン|概要|
-|:---|:---:|:---|
-|Vue.js|``2.6.10``|Javascriptフレームワーク|
-|Vue Router|``3.0.3``|Vue.jsのためのルーティングライブラリ|
-|Vue Material|``1.0.0-beta-10.2``|Vue.jsのためのマテリアルデザイン|
+|Library Name|Version|Description|
+|:---|:---|:---|
+|Vue.js|``2.6.10``|Javascript Framework|
+|Vue Router|``3.0.3``|Routing library for Vue.js|
+|Vue Material|``1.0.0-beta-10.2``|Material Design for Vue.js|
 
-## ライセンス
-本プロジェクトのライセンスは、MITライセンスです。
-
+## License
+The License of this sample is *MIT License*.
