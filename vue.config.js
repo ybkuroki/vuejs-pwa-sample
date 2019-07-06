@@ -1,7 +1,8 @@
 module.exports = {
-  //outputDir: 'docs',
-  //assetDir: './',
-  //public: './',
+  outputDir: 'docs',
+  assetsDir: './',
+  publicPath: './',
+  productionSourceMap: false,
   pwa: {
     workboxPluginMode: 'GenerateSW',
     workboxOptions: {
