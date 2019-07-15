@@ -1,9 +1,4 @@
 module.exports = {
-  outputDir: 'docs',
-  assetsDir: './',
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/vuejs-pwa-sample/'
-    : '/',
   productionSourceMap: false,
   pwa: {
     workboxPluginMode: 'GenerateSW',
