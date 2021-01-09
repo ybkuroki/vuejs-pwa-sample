@@ -1,12 +1,15 @@
 <template>
   <Header>
     <template slot="header-content">
-      <md-field md-clearable class="md-menu">
-        <md-input placeholder="Search" v-model="keyword" @keyup.enter="search" />
-       </md-field>
-       <md-button class="md-icon-button" @click="search">
-          <md-icon>search</md-icon>
-        </md-button>
+      <md-field md-clearable class="md-autocomplete md-autocomplete-box md-inline">
+        <div class="md-menu">
+          <md-input v-model="keyword" @keyup.enter="search" />
+        </div>
+        <label>Search...</label>
+      </md-field>
+      <md-button class="md-icon-button" @click="search">
+        <md-icon>search</md-icon>
+      </md-button>
     </template>
     
     <template slot="app-content">
@@ -49,12 +52,3 @@ export default {
   }
 }
 </script>
-
-<style>
-input {
-    color: white !important; 
-}
-input::placeholder {
-    color: white !important; 
-}
-</style>
