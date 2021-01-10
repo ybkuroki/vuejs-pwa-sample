@@ -13,13 +13,12 @@
     </template>
     
     <template slot="app-content">
-      <Card v-for="content in contents" 
-          :title="content.title" 
-          :content="content.description" 
-          :url="content.event_url"
-          :key="content.event_id"
-          :update="update" />
       <md-progress-spinner v-if="update" md-mode="indeterminate"></md-progress-spinner>
+      <Card v-else v-for="content in contents" 
+        :title="content.title" 
+        :content="content.description" 
+        :url="content.event_url"
+        :key="content.event_id" />
     </template>
   </Header>
 </template>

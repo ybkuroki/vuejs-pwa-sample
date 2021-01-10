@@ -1,5 +1,5 @@
 <template>
-    <md-card md-with-hover v-if="update == false">
+    <md-card md-with-hover>
       <md-card-header>
         <div class="md-title">{{ title }}</div>
       </md-card-header>
@@ -21,7 +21,6 @@ export default {
         title: String,
         content: String,
         url: String,
-        update: Boolean,
     },
     methods: {
         clickDetail() {
