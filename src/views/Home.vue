@@ -1,22 +1,24 @@
 <template>
   <Header>
     <template slot="header-content">
-      <md-field md-clearable class="md-menu">
-        <md-input placeholder="Search" v-model="keyword" @keyup.enter="search" />
-       </md-field>
-       <md-button class="md-icon-button" @click="search">
-          <md-icon>search</md-icon>
-        </md-button>
+      <md-field md-clearable class="md-autocomplete md-autocomplete-box md-inline">
+        <div class="md-menu">
+          <md-input v-model="keyword" @keyup.enter="search" />
+        </div>
+        <label>Search...</label>
+      </md-field>
+      <md-button class="md-icon-button" @click="search">
+        <md-icon>search</md-icon>
+      </md-button>
     </template>
     
     <template slot="app-content">
-      <Card v-for="content in contents" 
-          :title="content.title" 
-          :content="content.description" 
-          :url="content.event_url"
-          :key="content.event_id"
-          :update="update" />
       <md-progress-spinner v-if="update" md-mode="indeterminate"></md-progress-spinner>
+      <Card v-else v-for="content in contents" 
+        :title="content.title" 
+        :content="content.description" 
+        :url="content.event_url"
+        :key="content.event_id" />
     </template>
   </Header>
 </template>
@@ -49,12 +51,3 @@ export default {
   }
 }
 </script>
-
-<style>
-input {
-    color: white !important; 
-}
-input::placeholder {
-    color: white !important; 
-}
-</style>
